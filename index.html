@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم لاگین</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .btn-hover {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        .btn-hover:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.2);
+        }
+        .input-focus:focus {
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-500 to-purple-600 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white bg-opacity-20 backdrop-blur-md rounded-xl shadow-xl overflow-hidden w-full max-w-md">
+        <div class="p-8">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-bold text-white">ورود به حساب کاربری</h1>
+                <p class="text-white text-opacity-80 mt-2">لطفا اطلاعات خود را وارد کنید</p>
+            </div>
+
+            <form>
+                <div class="mb-6">
+                    <label class="block text-white text-sm font-medium mb-2" for="username">
+                        نام کاربری
+                    </label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <input id="username" type="text" 
+                            class="input-focus bg-white bg-opacity-20 text-white w-full py-3 pr-10 pl-4 rounded-lg border border-white border-opacity-30 focus:outline-none placeholder-white placeholder-opacity-50"
+                            placeholder="نام کاربری خود را وارد کنید">
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-white text-sm font-medium mb-2" for="password">
+                        رمز عبور
+                    </label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-400">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <input id="password" type="password" 
+                            class="input-focus bg-white bg-opacity-20 text-white w-full py-3 pr-10 pl-4 rounded-lg border border-white border-opacity-30 focus:outline-none placeholder-white placeholder-opacity-50"
+                            placeholder="رمز عبور خود را وارد کنید">
+                    </div>
+                </div>
+
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center">
+                        <input id="remember" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                        <label for="remember" class="mr-2 block text-sm text-white">
+                            مرا به خاطر بسپار
+                        </label>
+                    </div>
+                    <div>
+                        <a href="#" class="text-sm text-white hover:text-blue-200 transition-colors">
+                            رمز عبور را فراموش کرده‌اید؟
+                        </a>
+                    </div>
+                </div>
+
+                <button type="submit" 
+                    class="btn-hover w-full bg-white text-blue-600 py-3 px-4 rounded-lg font-medium text-lg hover:bg-blue-50 transition-all duration-300">
+                    ورود
+                </button>
+
+                <div class="mt-6 text-center">
+                    <p class="text-white text-opacity-80">
+                        حساب کاربری ندارید؟ 
+                        <a href="#" class="text-white font-medium hover:text-blue-200 transition-colors">
+                            ثبت نام کنید
+                        </a>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
